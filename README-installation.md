@@ -29,14 +29,13 @@ The order of installation of dependencies, as well as their versions, is importa
    ```
 3. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html). Create and activate a `alnlp` environment:
 
-   ```bash
+ ```bash
 conda env create -f environment.yml -n alnlp
 conda activate alnlp
  ```
 
 4. Load some python dependencies, make sure you are in your conda environment when you do this:
-
-   ``
+```
 python
 >>> import nltk
 >>> nltk.download('stopwords')
@@ -51,6 +50,5 @@ You can test the installation via:
 python experiment_001.py
 ```
 The above example script runs the active learning loop for 4 logistic regression models, each one using a different acquisition function. The dataset used is the well-known 20-NewsGroup dataset. In the ActiveLearningLoop's execute method, the user can inform the percentages of data initially used for training, the size of test set, and the how many new samples will be selected to be labeled at every iteration of the active learning loop. After the execution, a report with all the results and plots will be stored in the outputs folder. A sub-folder with the same name as the python script will be created (experiment_001 in this case). A pdf with plots will be placed in this sub-folder.
-![image](https://user-images.githubusercontent.com/90928004/152185081-0dc721b2-42a2-4160-8211-71665cb36a63.png)
 
 
