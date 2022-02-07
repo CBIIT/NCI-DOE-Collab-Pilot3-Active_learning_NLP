@@ -4,11 +4,11 @@
 
 This repository implements an active learning loop for natural language processing (ALNLP) of pathology reports related to NCI Pilot 3 project. It implements two methods for embedding extraction of the unstructured text: 1) bag-of-words with dimensional reduction methods, and 2) pre-trained BERT model. Deterministic and Bayesian classifiers are available to predict attributes contained in the pathology reports.
 
-ALNP is an algorithm developed as a part of the Joint Design of Advanced Computing Solutions for Cancer (JDACS4C[https://datascience.cancer.gov/collaborations/joint-design-advanced-computing]) pilot projects, to improve the assessment of the pathology report. Researchers can use ANLP to perform prediction of attributes on pathology reports.
+ALNP is an algorithm developed as a part of the Joint Design of Advanced Computing Solutions for Cancer ([JDACS4C] (https://datascience.cancer.gov/collaborations/joint-design-advanced-computing)) pilot projects, to improve the assessment of the pathology report. Researchers can use ANLP to perform prediction of attributes on pathology reports.
 
 ## User Community
 
-Researchers who want to compute and analyze membrane surfaces or study their properties for large computational jobs such as those carried out by the JDACS4C Pilot 3 program [https://datascience.cancer.gov/collaborations/joint-design-advanced-computing/population-pilot].
+Researchers who want to compute and analyze membrane surfaces or study their properties for large computational jobs such as those carried out by the [JDACS4C Pilot 3 program] (https://datascience.cancer.gov/collaborations/joint-design-advanced-computing/population-pilot).
 
 ## Usability
 Requires many software dependencies, even on well-supported high-performance computing systems such as NIH's Biowulf.
@@ -16,7 +16,7 @@ Requires many software dependencies, even on well-supported high-performance com
 
 ## Technical Details
   
-Data scientists can train the provided untrained model on their own data, or use the trained model to test the data from 20 newsgroups dataset[http://qwone.com/~jason/20Newsgroups/]. The dataset contains 18000 newsgroups posts on 20 tppics that is available via sklearn package to download and used to test this capability.
+Data scientists can train the provided untrained model on their own data, or use the trained model to test the data from [20 newsgroups dataset] (http://qwone.com/~jason/20Newsgroups/). The dataset contains 18000 newsgroups posts on 20 tppics that is available via sklearn package to download and used to test this capability.
 
 Refer to this [README](./README-installation.md).
 
