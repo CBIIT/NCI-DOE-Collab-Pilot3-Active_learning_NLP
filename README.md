@@ -2,7 +2,11 @@
 
 ## Description
 
-This repository implements an active learning loop for natural language processing (ALNLP) of pathology reports related to NCI Pilot 3 project. It implements two methods for embedding extraction of the unstructured text: 1) bag-of-words with dimensional reduction methods, and 2) pre-trained BERT model. Deterministic and Bayesian classifiers are available to predict attributes contained in the pathology reports.
+This repository implements an active learning loop for natural language processing (ALNLP) of pathology reports related to NCI Pilot 3 project. It implements the following methods for embedding extraction of the unstructured text: 
+ * Bag-of-words with dimensional reduction methods, and 
+ * Pre-trained BERT model. 
+
+Deterministic and Bayesian classifiers are available to predict attributes contained in the pathology reports.
 
 ALNP is an algorithm developed as a part of the Joint Design of Advanced Computing Solutions for Cancer ([JDACS4C](https://datascience.cancer.gov/collaborations/joint-design-advanced-computing)) pilot projects, to improve the assessment of the pathology report. Researchers can use ANLP to perform prediction of attributes on pathology reports.
 
