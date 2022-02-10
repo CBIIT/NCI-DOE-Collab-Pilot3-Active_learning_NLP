@@ -21,14 +21,14 @@ Data scientists can train the provided untrained model on their own data, or use
 Refer to this [README](./README-installation.md).
 
 
-#License
+## License
 LLNL released ALNLP under GNU GPL-3.0 license.
 
 For details, refer to LICENSE and NOTICE.
 
 LLNL-CODE-797271
   
-# Authors
+## Authors
 
 - André R. Gonçalves (goncalves1@llnl.gov)
 - Hiranmayi Ranganathan (ranganathan2@llnl.gov)
