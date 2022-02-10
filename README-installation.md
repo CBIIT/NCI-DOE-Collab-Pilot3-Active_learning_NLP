@@ -22,27 +22,28 @@ The order of installation of dependencies, as well as their versions, is importa
    cd $alnlp_INSTALLL
    git clone https://github.com/CBIIT/NCI-DOE-Collab-Pilot3-Active_learning_NLP.git
    ```
-2. Allocate a compute node for the installation process:
+4. Allocate a compute node for the installation process:
 
    ```bash
    sinteractive --mem=2g
    ```
-3. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html). Create and activate a `alnlp` environment:
+5. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html). Create and activate a `alnlp` environment:
 
- ```bash
-conda env create -f environment.yml -n alnlp
-conda activate alnlp
- ```
+    ```bash
+   conda env create -f environment.yml -n alnlp
+   conda activate alnlp
+    ```
 
-4. Load some python dependencies, make sure you are in your conda environment when you do this:
-```
-python
->>> import nltk
->>> nltk.download('stopwords')
->>> nltk.download('punkt')
-```
+6. Load some python dependencies, make sure you are in your conda environment when you do this:
 
-5. ## Testing the Installation
+   ```
+   python
+   >>> import nltk
+   >>> nltk.download('stopwords')
+   >>> nltk.download('punkt')
+   ```
+
+## Testing the Installation
 
 You can test the installation via:
 
