@@ -1,14 +1,14 @@
-# Active Learning framework for Natural Language Processing of pathology reports.
+# Active Learning Framework for Natural Language Processing of Pathology Reports
 
 ## Description
 
-This repository implements an active learning loop for natural language processing (ALNLP) of pathology reports related to NCI Pilot 3 project. It implements the following methods for embedding extraction of the unstructured text: 
+This repository implements an active learning loop for natural language processing (ALNLP) of pathology reports related to the NCI Pilot 3 project. It implements the following methods for embedding extraction of the unstructured text: 
  * Bag-of-words with dimensional reduction methods, and 
  * Pre-trained BERT model. 
 
-Deterministic and Bayesian classifiers are available to predict attributes contained in the pathology reports.
+Deterministic and Bayesian classifiers are available to predict attributes in the pathology reports.
 
-ALNP is an algorithm developed as a part of the Joint Design of Advanced Computing Solutions for Cancer ([JDACS4C](https://datascience.cancer.gov/collaborations/joint-design-advanced-computing)) pilot projects, to improve the assessment of the pathology report. Researchers can use ANLP to perform prediction of attributes on pathology reports.
+ALNP is an algorithm developed as a part of the Joint Design of Advanced Computing Solutions for Cancer ([JDACS4C](https://datascience.cancer.gov/collaborations/joint-design-advanced-computing)) pilot projects, to improve the assessment of pathology reports. Researchers can use ANLP to perform prediction of attributes on pathology reports.
 
 ## User Community
 
@@ -20,13 +20,13 @@ Requires many software dependencies, even on well-supported high-performance com
 
 ## Technical Details
   
-Data scientists can train the provided untrained model on their own data, or use the trained model to test the data from [20 newsgroups dataset](http://qwone.com/~jason/20Newsgroups/). The dataset contains 18000 newsgroups posts on 20 tppics that is available via sklearn package to download and used to test this capability.
+Data scientists can train the provided untrained model on their own data, or use the trained model to test the data from the [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) dataset. The dataset contains 18,000 newsgroup posts on 20 topics that are available via sklearn package to download and test this capability.
 
-Refer to this [README](./README-installation.md).
+Refer to the [installation README](./README-installation.md).
 
 
 ## License
-LLNL released ALNLP under GNU GPL-3.0 license.
+Lawrence Livermore National Laboratory (LLNL) released ALNLP under GNU GPL-3.0 license.
 
 For details, refer to LICENSE and NOTICE.
 
