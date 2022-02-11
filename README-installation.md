@@ -1,6 +1,8 @@
-## Active Learning framework for Natural Language Processing of pathology reports installation and testing on Biowulf
+## Installation and Testing on Biowulf
 
 The order of installation of dependencies, as well as their versions, is important; follow these steps carefully.
+
+To install the active learning framework for natural language processing (ALNLP) of pathology reports:
 
 1. Log in to [Biowulf](https://hpc.nih.gov/docs/connect.html). 
 
@@ -27,14 +29,14 @@ The order of installation of dependencies, as well as their versions, is importa
    ```bash
    sinteractive --mem=2g
    ```
-5. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html). Create and activate a `alnlp` environment:
+5. Install the [Miniconda package manager](https://docs.conda.io/en/latest/miniconda.html). Create and activate an `alnlp` environment:
 
     ```bash
    conda env create -f environment.yml -n alnlp
    conda activate alnlp
     ```
 
-6. Load some python dependencies, make sure you are in your conda environment when you do this:
+6. In your conda environment, load python dependencies:
 
    ```
    python
@@ -51,6 +53,6 @@ You can test the installation via:
 cd $alnlp_INSTALLL/NCI-DOE-Collab-Pilot3-Active_learning_NLP/experiments
 python experiment_001.py
 ```
-The above example script runs the active learning loop for 4 logistic regression models, each one using a different acquisition function. The dataset used is the well-known 20-NewsGroup dataset. In the ActiveLearningLoop's execute method, the user can inform the percentages of data initially used for training, the size of test set, and the how many new samples will be selected to be labeled at every iteration of the active learning loop. After the execution, a report with all the results and plots will be stored in the outputs folder. A sub-folder with the same name as the python script will be created (experiment_001 in this case). A pdf with plots will be placed in this sub-folder.
+The above example script runs the active learning loop for four logistic regression models, each one using a different acquisition function. The dataset used is the [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) dataset. In the loop's execute method, you can specify the percentages of data initially used for training, the size of test set, and how many new samples will be selected to be labeled at every iteration of the loop. After the execution, a report with all the results and plots will be stored in the outputs folder. A sub-folder with the same name as the python script will be created (experiment_001 in this case). A PDF file with plots will be placed in this sub-folder.
 
 
