@@ -4,7 +4,7 @@
 
 This repository implements an active learning loop for natural language processing (ALNLP) of pathology reports related to the NCI Pilot 3 project. This framework implements the following methods for embedding extraction of the unstructured text: 
  * Bag-of-words with dimensional reduction methods, and 
- * Pre-trained BERT(Bidirectional Encoder Representations from Transformers)model. 
+ * Pre-trained BERT (Bidirectional Encoder Representations from Transformers) model. 
 
 Deterministic and Bayesian classifiers are available (in our code repository) to predict attributes in the pathology reports.
 
