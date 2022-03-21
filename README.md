@@ -8,7 +8,7 @@ This repository implements an active learning loop for natural language processi
 
 Deterministic and Bayesian classifiers are available (in our code repository) to predict attributes in the pathology reports.
 
-ALNP is an algorithm developed as a part of the Joint Design of Advanced Computing Solutions for Cancer ([JDACS4C](https://datascience.cancer.gov/collaborations/joint-design-advanced-computing)) pilot projects, to improve the assessment of pathology reports. Researchers can use ANLP to perform prediction of attributes on pathology reports.
+ALNP is an algorithm developed as a part of the Joint Design of Advanced Computing Solutions for Cancer ([JDACS4C](https://datascience.cancer.gov/collaborations/joint-design-advanced-computing)) pilot projects, to improve the assessment of pathology reports. Researchers can also use ANLP to perform prediction of attributes on pathology reports.
 
 ## User Community
 
