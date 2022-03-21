@@ -52,6 +52,6 @@ You can test the installation via:
 cd $alnlp_INSTALL/NCI-DOE-Collab-Pilot3-Active_learning_NLP/experiments
 python experiment_001.py
 ```
-The above example script runs the active learning loop for four logistic regression models, each one using a different acquisition function. The dataset used is the [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) dataset. In the loop's execute method, you can specify the percentages of data initially used for training, the size of test set, and how many new samples will be selected to be labeled at every iteration of the loop. After the execution, a report with all the results and plots will be stored in the outputs folder. A sub-folder with the same name as the python script will be created (experiment_001 in this case). A PDF file with plots will be placed in this sub-folder.
+The above example script runs the active learning loop for four logistic regression models, each one using a different acquisition function. The dataset used in the example is [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) dataset. In the loop's execute method, you can specify the percentages of data initially used for training, the size of test set, and how many new samples will be selected to be labeled at every iteration of the loop. After the execution, a report with all the results and plots will be stored in the outputs folder. A sub-folder with the same name as the python script will be created (experiment_001 in this case). A PDF file with plots will be placed in this sub-folder.
 
 
