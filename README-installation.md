@@ -1,6 +1,5 @@
 ## Installation and Testing on Biowulf
 
-The order of installation of dependencies, as well as their versions, is important; follow these steps carefully.
 
 To install the active learning framework for natural language processing (ALNLP) of pathology reports:
 
@@ -12,16 +11,16 @@ To install the active learning framework for natural language processing (ALNLP)
    
       ```cd /data/$USER/export```
    
-   2. Export it to the `$alnlp_INSTALL` variable. For example: 
+   2. Export the current working directory to the `$alnlp_INSTALL` variable. For example: 
    
-      ```export alnlp_INSTALL=$(pwd)```
+      ```export alnlp_INSTAL=$(pwd)```
 
-   Do this on Biowulf or Helix. (That is, not from a Biowulf compute node, where GitHub access is limited.)
+   Do this on Biowulf. (That is, not from a Biowulf compute node, where GitHub access is limited.)
  
 3. Clone this repository: 
 
    ```bash
-   cd $alnlp_INSTALLL
+   cd $alnlp_INSTALL
    git clone https://github.com/CBIIT/NCI-DOE-Collab-Pilot3-Active_learning_NLP.git
    ```
 4. Allocate a compute node for the installation process:
@@ -50,7 +49,7 @@ To install the active learning framework for natural language processing (ALNLP)
 You can test the installation via:
 
 ```
-cd $alnlp_INSTALLL/NCI-DOE-Collab-Pilot3-Active_learning_NLP/experiments
+cd $alnlp_INSTALL/NCI-DOE-Collab-Pilot3-Active_learning_NLP/experiments
 python experiment_001.py
 ```
 The above example script runs the active learning loop for four logistic regression models, each one using a different acquisition function. The dataset used is the [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) dataset. In the loop's execute method, you can specify the percentages of data initially used for training, the size of test set, and how many new samples will be selected to be labeled at every iteration of the loop. After the execution, a report with all the results and plots will be stored in the outputs folder. A sub-folder with the same name as the python script will be created (experiment_001 in this case). A PDF file with plots will be placed in this sub-folder.
