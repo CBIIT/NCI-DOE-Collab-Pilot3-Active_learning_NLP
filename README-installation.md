@@ -13,7 +13,7 @@ To install the active learning framework for natural language processing (ALNLP)
    
    2. Export the current working directory to the `$alnlp_INSTALL` variable. For example: 
    
-      ```export alnlp_INSTAL=$(pwd)```
+      ```export alnlp_INSTALL=$(pwd)```
 
    Do this on Biowulf. (That is, not from a Biowulf compute node, where GitHub access is limited.)
  
@@ -52,6 +52,4 @@ You can test the installation via:
 cd $alnlp_INSTALL/NCI-DOE-Collab-Pilot3-Active_learning_NLP/experiments
 python experiment_001.py
 ```
-The above example script runs the active learning loop for four logistic regression models, each one using a different acquisition function. The dataset used in the example is [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) dataset. In the loop's execute method, you can specify the percentages of data initially used for training, the size of test set, and how many new samples will be selected to be labeled at every iteration of the loop. After the execution, a report with all the results and plots will be stored in the outputs folder. A sub-folder with the same name as the python script will be created (experiment_001 in this case). A PDF file with plots will be placed in this sub-folder.
-
-
+The above example script runs the active learning loop for four logistic regression models, each one using a different acquisition function. This example uses the [20 Newsgroups](http://qwone.com/~jason/20Newsgroups/) dataset. In the loop's execute method, you can specify what percentages of data you want to initially use for training, the size of test set, and how many new samples you want each iteration of the loop to select for labeling. After the execution, the example script creates a report with all the results and plots in the given output folder. The Python script also creates a sub-folder with the same name as the script (experiment_001 in this case) to store the plots in PDF format.
