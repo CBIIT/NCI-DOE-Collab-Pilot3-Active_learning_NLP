@@ -20,10 +20,10 @@ To use the software package in this repository, users must meet the following cr
 * Possess the basic skills to program and run Python scripts.
 * Understand the input parameters of the ALNLP algorithm, so that they can set the parameters appropriately to execute the algorithm.
 
-To use the optimization loop (simulation), users have to be familiar with natural language processing techniques, training of classifiers, and active learning methods.In the ActiveLearningLoop's execute method, the user can inform the percentages of data initially used for training, the size of test set, and the how many new samples will be selected to be labeled at every iteration of the active learning loop.
+To use the optimization loop (simulation), users must be familiar with natural language processing techniques, training of classifiers, and active learning methods. In the ActiveLearningLoop's execute method, the user can inform the percentages of data initially used for training, the size of test set, and how many new samples will be selected to be labeled at every iteration of the active learning loop.
 
 ## Uniqueness
-Active learning is an existing technique in machine learning. This example shows how active learning can be used during the generation of the ground truth of free text documents.There are other examples to perform active learning for NLP. However, the ALNLP algorithm presented in this repository compares multiple acquisition functions to select the next batch of samples to be labeled (such as random, entropy, marginal sampling, abstention). 
+Active learning is an existing technique in machine learning. This example shows how active learning can be used during the generation of the ground truth of free text documents. Other examples perform active learning for NLP. However, the ALNLP algorithm presented in this repository compares multiple acquisition functions to select the next batch of samples to be labeled (such as random, entropy, marginal sampling, abstention). 
 
 ## Technical Details
 
