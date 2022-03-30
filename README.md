@@ -1,70 +1,43 @@
-# AL NLP
-Active Learning framework for Natural Language Processing of pathology reports.
+# Active Learning Framework for Natural Language Processing of Pathology Reports
 
-# Repository content
+## Description
 
-This repository implements an active learning loop for natural language processing of pathology reports related to NCI Pilot 3 project. It implements two methods for embedding extraction of the unstructured text: 1) bag-of-words with dimensional reduction methods, and 2) pre-trained BERT model. Deterministic and Bayesian classifiers are available to predict attributes contained in the pathology reports.
+This repository implements an active learning loop for natural language processing (ALNLP) of pathology reports related to the NCI Pilot 3 project. This framework implements the following methods for embedding extraction of the unstructured text: 
+ * Bag-of-words with dimensional reduction methods, and 
+ * Pre-trained BERT (Bidirectional Encoder Representations from Transformers) model. 
 
-# Repository structure
+Deterministic and Bayesian classifiers are available (in [classifiers](classifiers)) to predict attributes in the pathology reports.
 
-```
-al_nlp
-│   README.md  
-|   acquisition_functions.py   # contains acquisitions functions available to use
-|   datasets.py   # class to store dataset information
-|   design.py   # implements active learning loop
-│
-└───classifiers/    # code for all classification methods
-│   │   bayesian/   # code for Linear Bayesian methods (Bayesian models naturally provides uncertainty quantification)
-│   │   bootstrapping/  # code for bootstrapping-based methods (uncertainty is obtained from multiple models)
-|   |   deterministic/   # codes for deterministic methods (use softmax probability as uncertainty)
-│   
-└───feature_extraction/   # codes for BERT and Bag-of-Words feature extraction
-│   
-└───experiments/  # scripts to run active learning experiments
-|
-└───outputs/   # store results and reports (pdf files) of the experiments
-|
-└───data/   # store downloaded datasets
-|
-└───path_reports_preprocessing/  # scripts to pre-process pathology reports (data not present in this repository)
-|
-└───utils/  # auxiliary codes
+ALNP is an algorithm developed as a part of the Joint Design of Advanced Computing Solutions for Cancer ([JDACS4C](https://datascience.cancer.gov/collaborations/joint-design-advanced-computing)) pilot projects, to improve the assessment and prediction of attributes in the pathology reports.
 
-```
+## User Community
 
-# Software requirements
-- Operating System: Windows or MacOS
-- Python 3.7 or higher
-- Python packages required:
-  - transformers (https://github.com/huggingface/transformers)
-  - pymc3 3.8 (https://github.com/pymc-devs/pymc3)
-  - pytorch 1.3+
-  - nltk  3.4+
-  - theano 1.0
-  - scikit-learn 0.20+
-  - matplotlib 3.0+
-  - pytorch 1.3+
-  - pandas 
-  - ...
+ * Data scientists interested in guiding the ground truth augmentation process to enhance a performance of a classifier of free form texts (such as pathology reports, clinical trials, abstracts, and so on). 
+ * Researchers who want to perform improved assesssment and prediction on pathology reports are carried out by the [JDACS4C Pilot 3 program](https://datascience.cancer.gov/collaborations/joint-design-advanced-computing/population-pilot).
 
-For easy installation, we made a conda enviroment available in `environment.yml`. To recreate the same environment used to develop the code, simply do:
+## Usability
+To use the software package in this repository, users must meet the following criteria:
+* Possess the basic skills to program and run Python scripts.
+* Understand the input parameters of the ALNLP algorithm, so that they can set the parameters appropriately to execute the algorithm.
 
-> conda env create -f environment.yml
+To use the optimization loop (simulation), users must be familiar with natural language processing techniques, training of classifiers, and active learning methods. In the ActiveLearningLoop's execute method, a user can specify what percentages of data the user wants to initially use for training, the size of the test set, and how many new samples the user wants each iteration of the loop to select for labeling.
 
-# How to run it
-The folder named `experiments` contains a set of python scripts demonstrating how to execute the active learning loop for a given set of classification methods and acquisition functions for a particular dataset. For instance, `experiment_001.py` run the active learning loop for 4 logistic regression models, each one using a different acquisition function. The dataset used is the well-known [20-NewsGroup](https://scikit-learn.org/0.19/datasets/twenty_newsgroups.html) dataset. In the `ActiveLearningLoop`'s execute method, the user can inform the percentages of data initially used for training, the size of test set, and the how many new samples will be selected to be labeled at every iteration of the active learning loop. After the execution, a report with all the results and plots will be stored in the `outputs` folder. A sub-folder with the same name as the python script will be created (`experiment_001` in this case). A pdf with plots will be placed in this sub-folder.
+## Uniqueness
+Active learning is an existing technique in machine learning. This example shows how active learning can be used during the generation of the ground truth of free text documents. Other examples perform active learning for NLP. However, the ALNLP algorithm presented in this repository compares multiple acquisition functions to select the next batch of samples to be labeled (such as random, entropy, marginal sampling, abstention). 
 
-> python experiment_001.py
+## Technical Details
 
-# Authors
+Refer to the [installation README](./README-installation.md).
+
+
+## Release Number
+
+LLNL-CODE-797271
+  
+## Authors
 
 - André R. Gonçalves (goncalves1@llnl.gov)
 - Hiranmayi Ranganathan (ranganathan2@llnl.gov)
 - Braden C. Soper (soper3@llnl.gov)
 - Pryiadip Ray (ray34@llnl.gov)
 - Ana Paula Sales (deoliveirasa1@llnl.gov)
-
-# Release number
-
-LLNL-CODE-797271
